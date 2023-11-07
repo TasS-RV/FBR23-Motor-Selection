@@ -30,3 +30,8 @@ The naming convention includes the main model (say, 180, or 230 etc...), the flo
 and A, B, D etc... arbitrarily, just to distinguish between motors that are the same U specification.
 
 Note for modelling the accelerations, we have used the rated torque instead of Peak torque, but you can edit this in the for loop iterating over each motor in the Plotter.py file.
+
+Running:
+1) Install the requirements.txt file in your virtual environment to have all necessary packages. There are more fundamental packages than needed, as Linux required some additional libraries for visualisation.
+2) You only need to run Plotter.py. It will automatically save any graphs into the /Graphs folder for viewing.
+3) At the moment it can only accept 3 motors in the spreadsheet at once. However, changing the code towards the bottom of the ____Motors Selection____ section in Parameters.py is trivial if you want to add more motors into 'motors_list'.
