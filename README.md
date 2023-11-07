@@ -12,8 +12,7 @@ Edit these in the parameters.py file:
 
 6. drag_coeff - An arbitrary coefficient of drag used for FS cars
 7. frontal_area - maximum assumed cross-sectional area (assuming wings do nothing and are ramming into the air perpendicular) (m)
-
-8.resolution - not a car parameter, but simply number of divisions whih motor speed is split into. The higher the value, the better the accuracy of torque value from the motor (as we interpolate the torque curve).
+8. resolution - not a car parameter, but simply number of divisions whih motor speed is split into. The higher the value, the better the accuracy of torque value from the motor (as we interpolate the torque curve).
 
 Edit these parameters in the Motors_def Excel file:
 ![image](https://github.com/TasS-RV/FBR23-Motor-Selection/assets/93861976/4e82b7a1-f13f-48f4-bcac-c2caf11eee27)
@@ -25,7 +24,7 @@ Next to each is (rather confusingly) the Parameter number to which is correspond
 4. P_nominal - rated continuous running power (W) - 3
 5. T_peak - Peaktorque (Nm) - 6
 6. P_peak - Peak power (W) - 7
-7. 
+   
 The naming convention includes the main model (say, 180, or 230 etc...), the flow-rate specification (1U, 2U...)
 and A, B, D etc... arbitrarily, just to distinguish between motors that are the same U specification.
 
