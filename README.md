@@ -20,10 +20,10 @@ Edit these parameters in the Motors_def Excel file:
 Next to each is (rather confusingly) the Parameter number to which is corresponds to on the Inetic datasheet.
 1. w1 - Speed at which the peak torque of the motor starts to drop-off (RPM) - parameter 2
 2. w3 - Maximum rotational speed of the motor (RPM) - parameter 4
-3. T_nominal - rated continuous running torque (Nm) - 1
-4. P_nominal - rated continuous running power (W) - 3
-5. T_peak - Peaktorque (Nm) - 6
-6. P_peak - Peak power (W) - 7
+3. T_nominal - rated continuous running torque (Nm) - parameter 1
+4. P_nominal - rated continuous running power (W) - parameter 3
+5. T_peak - Peaktorque (Nm) - parameter 6
+6. P_peak - Peak power (W) - parameter 7
    
 The naming convention includes the main model (say, 180, or 230 etc...), the flow-rate specification (1U, 2U...)
 and A, B, D etc... arbitrarily, just to distinguish between motors that are the same U specification.
