@@ -34,4 +34,4 @@ Note for modelling the accelerations, we have used the rated torque instead of P
 Running:
 1) Install the requirements.txt file in your virtual environment to have all necessary packages. There are more fundamental packages than needed, as Linux required some additional libraries for visualisation.
 2) You only need to run Plotter.py. It will automatically save any graphs into the /Graphs folder for viewing.
-3) At the moment it can only accept 3 motors in the spreadsheet at once. However, changing the code towards the bottom of the ____Motors Selection____ section in Parameters.py is trivial if you want to add more motors into 'motors_list'.
+3) At the moment it can only accept 3 motors in the spreadsheet at once. However, changing the code towards the bottom of the ____Motors Selection ____ section in Parameters.py is trivial if you want to add more motors into 'motors_list'.
