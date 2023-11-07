@@ -53,7 +53,7 @@ def graph_plot(motor_, displacements, acc_times):
     
 
     #Plot power curve with linear increase up to end of const. torque region
-    axes[1].plot(speeds, powers, label='Peak torque: {:.2f} W'.format(motor_.P_peak), color='red')
+    axes[1].plot(speeds, powers, label='Peak power: {:.2f} W'.format(motor_.P_peak), color='red')
     axes[1].set_title('Power curve --- Peak torque/power transition frequency = {:.2f}'.format(motor_.w1))
     axes[1].legend()
     
