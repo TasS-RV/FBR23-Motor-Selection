@@ -1,4 +1,5 @@
 from Parameters import FS_car, motor, motors_list, FBR23
+import csv
 import math
 import matplotlib.pyplot as plt
 import numpy as np
@@ -18,10 +19,25 @@ if not os.path.exists(graphs_folder):
 
 def plot_save(motor_name, file_loc):
     '''
-    Saves each plot - unique identifier is motor name, with peak power/ torque characteristics to distinguish model from datasheet.
+    1. Saves each plot - unique identifier is motor name, with peak power/ torque characteristics to distinguish model from datasheet.
+    
+    2. Generates .csv files for each motor, with torque and power against RPM (required for Lap-time-sim.)    
     '''
     plot_filename = os.path.join(graphs_folder, "{}.png".format(motor_name.name))
     plt.savefig(plot_filename)
+
+
+    #Saving motor parameters into .csv files for use in lap-time simulator
+    csv_header = ["rpm","T/Nm","P/W"] #Torque, Power and RPM curves
+    with open("{}.csv".format(motor_name.name), mode='w', newline='') as file:
+        writer = csv.writer(file)
+
+    # Write the header
+        writer.writerow(csv_header)
+
+    # Write in RPM, Torque and Power data - recoversion to RPM from 'w' angular frequency is required for Lap-time-Sim. program
+        for row in zip(motor_name.speeds*60/(2*(math.pi)), motor_name.torques, motor_name.powers):
+            writer.writerow(row)
 
 
 def graph_plot(motor_, displacements, acc_times):
@@ -66,7 +82,7 @@ def graph_plot(motor_, displacements, acc_times):
     plt.tight_layout()
     plot_save(motor_, graphs_folder)
    
-    #plt.show() #Can comment this out and only check folder
+    plt.show() #Can comment this out and only check folder
 
 
 
